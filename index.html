@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bray | FrontEnd Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.lineicons.com/5.1/line/lineicons.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <div class="bg-noise"></div>
+    <div class="bg-gradient-orb orb-1"></div>
+    <div class="bg-gradient-orb orb-2"></div>
+    <div class="bg-gradient-orb orb-3"></div>
+
+    <header class="navbar reveal-nav">
+        <a href="#" class="logo">Bray<span>.</span></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" class="hover-target">About</a></li>
+                <li><a href="#skills" class="hover-target">Skills</a></li>
+                <li><a href="#projects" class="hover-target">Projects</a></li>
+                <li><a href="#contact" class="hover-target">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="https://github.com/bryanimanuell" target="_blank" class="nav-btn hover-target">
+            <i class='bx bxl-github'></i> GitHub
+        </a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="greeting reveal-stagger">Hi there, I'm</p>
+                <h1 class="reveal-stagger title-glow">Bryan Imanuel</h1>
+                <h2 class="reveal-stagger">FrontEnd-Focused <span class="gradient-text">Developer</span></h2>
+                <p class="bio reveal-stagger">
+                    Crafting beautiful, functional, and immersive user interfaces. <br>
+                    Currently diving deep into the modern JavaScript ecosystem.
+                </p>
+                <div class="hero-cta reveal-stagger">
+                    <a href="#projects" class="btn btn-primary hover-target">View My Work <i
+                            class='bx bx-right-arrow-alt'></i></a>
+                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank"
+                        class="btn btn-icon hover-target" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/bryanimanuell" target="_blank" class="btn btn-icon hover-target"
+                        aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator reveal-stagger">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>Scroll</p>
+            </div>
+        </section>
+
+        <section class="about section-padding" id="about">
+            <div class="section-heading reveal-up">
+                <h2>About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content reveal-up">
+                <div class="about-text glass-panel">
+                    <p>🌱 I'm a final-year student with hands-on experience as a <strong>Frontend Developer
+                            Intern</strong> at <b>PT. Akhdani Reka Solusi</b>. My primary focus is on bringing ideas to
+                        life using <strong>Vue.js</strong> and <strong>Laravel</strong>.</p>
+                    <p>🚀 I'm currently expanding my skill set into the modern JavaScript world, with a strong interest
+                        in <strong>Next.js & TypeScript</strong> to build scalable and performant full-stack
+                        applications.</p>
+                    <p>🎯 My goal is to leverage my skills and passion to secure a role as a <strong>Frontend or
+                            Full-Stack Developer</strong>, where I can contribute to meaningful projects and continue to
+                        grow.</p>
+                    <p class="hobbies">When I'm not coding, you can find me enjoying a cup of coffee ☕, playing billiard
+                        🎱, or going for a ride 🏍️.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section-padding" id="skills">
+            <div class="section-heading reveal-up">
+                <h2>My Tech Toolbox 🧰</h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-grid reveal-stagger-group">
+                <div class="skill-category glass-card reveal-item hover-target">
+                    <h3>Frontend</h3>
+                    <div class="icon-list">
+                        <i class='bx bxl-react' title="React"></i>
+                        <i class='lni lni-nextjs' style='margin-top: -10px;' title="Next.js"></i>
+                        <i class='bx bxl-vuejs' title="Vue.js"></i>
+                        <i class='bx bxl-javascript' title="JavaScript"></i>
+                        <i class='bx bxl-typescript' title="TypeScript"></i>
+                        <i class='bx bxl-html5' title="HTML5"></i>
+                        <i class='bx bxl-css3' title="CSS3"></i>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal-item hover-target">
+                    <h3>Backend</h3>
+                    <div class="icon-list">
+                        <i class='bx bxl-php' title="PHP"></i>
+                        <i class='bx bxl-nodejs' title="Node.js"></i>
+                        <i class='bx bxl-go-lang' title="Go"></i>
+                        <i class='bx bxl-java' title="Java"></i>
+                        <span class="text-icon" title="C Sharp">C#</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal-item hover-target">
+                    <h3>Database & Tools</h3>
+                    <div class="icon-list">
+                        <i class='bx bxl-postgresql' title="PostgreSQL"></i>
+                        <i class="lni lni-mysql" style='margin-top: -10px;' title="MySQL"></i>
+                        <i class="lni lni-supabase" style='margin-top: -10px;' title="Supabase"></i>
+                        <i class='bx bxl-git' title="Git"></i>
+                        <i class='bx bxl-figma' title="Figma"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section-padding" id="projects">
+            <div class="section-heading reveal-up">
+                <h2>Featured Projects 📌</h2>
+                <div class="line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-card reveal-up hover-target" data-glow>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class='bx bx-bowl-rice project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://github.com/bryanimanuell/learn-fe/tree/develop" target="_blank"
+                                    class="hover-target"><i class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                        <h3>Greek Yoghurt Shop</h3>
+                        <p class="project-desc">A premium-grade ecommerce frontend for a Greek yoghurt brand. Features a
+                            playful, health-conscious, and conversion-focused design system with modern ecommerce
+                            functionality.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>shadcn/ui</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up hover-target" data-glow>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class='bx bx-briefcase-alt-2 project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://github.com/bryanimanuell/JobBoard" target="_blank"
+                                    class="hover-target"><i class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                        <h3>Job Board</h3>
+                        <p class="project-desc">A personal project to build a freelance job board website where users
+                            can search, filter, and find available jobs. Currently under active development.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Supabase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up hover-target" data-glow>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class='bx bx-movie-play project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://github.com/KoceOey/cinematrix" target="_blank" class="hover-target"><i
+                                        class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                        <h3>Cinematrix API</h3>
+                        <p class="project-desc">A robust backend service for a movie streaming platform handling APIs
+                            for movie data, user management, subscriptions, and cron job updates.</p>
+                        <div class="project-tech">
+                            <span>Go</span>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up hover-target" data-glow>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class='bx bx-car project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://github.com/RayJonathan/RPLL-PT-Disetir-Atasan/" target="_blank"
+                                    class="hover-target"><i class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                        <h3>Disetir Atasan</h3>
+                        <p class="project-desc">A sports car dealership website from a university course project
+                            featuring interactive customization for car color, trim, and wheels.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact section-padding" id="contact">
+            <div class="contact-card glass-panel reveal-up">
+                <h2>Let's build something amazing together</h2>
+                <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll
+                    try my best to get back to you!</p>
+                <div class="contact-links">
+                    <a href="mailto:bryanimanuell@example.com" class="btn btn-primary hover-target">Say Hello</a>
+                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank"
+                        class="btn btn-secondary hover-target">LinkedIn</a>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>Designed & Built with <i class='bx bxs-heart' style="color: var(--clr-primary)"></i> by Bryanimanuell
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/bryanimanuell" target="_blank" class="hover-target"><i
+                            class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank" class="hover-target"><i
+                            class='bx bxl-linkedin'></i></a>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
