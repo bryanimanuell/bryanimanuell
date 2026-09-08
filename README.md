@@ -87,12 +87,32 @@
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://aggre.co.id/#/login" target="_blank">Aggre 🛒</a></h3>
-      <p>A premium-grade ecommerce frontend for a Greek yoghurt brand. Features a playful, health-conscious, and conversion-focused design system with modern ecommerce functionality.</p>
+      <h3><a href="https://aggre.co.id" target="_blank">Aggre </a></h3>
+      <p>An enterprise-grade procurement platform for hospital-to-supplier workflows. Integrated RESTful APIs with a .NET C# backend, enabling real-time product mapping, clinical data synchronization across hospital clients, invoice management and billing process with E-Faktur.</p>
       <p>
-        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
-        <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
-        <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white" />
+        <a href="https://skillicons.dev">
+          <img src="https://skillicons.dev/icons?i=nextjs,cs,ts" />
+        </a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://luvre-paris.vercel.app/" target="_blank">Luvre Paris</a></h3>
+      <p> Premium-grade ecommerce frontend for a Luvre Paris brand. Features a modern, sleek, and conversion-focused design system with modern ecommerce functionality.</p>
+      <p>
+        <a href="https://skillicons.dev">
+          <img src="https://skillicons.dev/icons?i=nextjs,ts,tailwindcss,shadcnui" />
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/bryanimanuell/learn-fe" target="_blank">Greek Yoghurt 🛒</a></h3>
+      <p> Premium-grade ecommerce frontend for a Greek yoghurt brand. Features a playful, health-conscious, and conversion-focused design system with modern ecommerce functionality.</p>
+      <p>
+        <a href="https://skillicons.dev">
+          <img src="https://skillicons.dev/icons?i=nextjs" />
+        </a>
       </p>
     </td>
     <td width="50%" valign="top">
@@ -107,8 +127,8 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/KoceOey/cinematrix" target="_blank">Cinematrix API 🎬</a></h3>
-      <p>A robust backend service for a movie streaming platform handling APIs for movie data, user management, subscriptions, and cron job updates.</p>
+      <h3><a href="https://github.com/bryanimanuell/Cinematrix" target="_blank">Cinematrix 🎬</a></h3>
+      <p> A robust backend service for a movie streaming platform handling APIs for movie data, user management, subscriptions, and cron job updates.</p>
       <p>
         <a href="https://skillicons.dev">
           <img src="https://skillicons.dev/icons?i=go" />

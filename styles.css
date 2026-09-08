@@ -962,6 +962,10 @@ body.hovering .cursor-outline {
     animation: fadeUpStagger 0.6s ease-out 0.4s forwards;
 }
 
+.projects-grid.active .project-card:nth-child(6) {
+    animation: fadeUpStagger 0.6s ease-out 0.5s forwards;
+}
+
 @keyframes fadeUpStagger {
     from {
         opacity: 0;
