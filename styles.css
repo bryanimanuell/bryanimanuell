@@ -391,13 +391,6 @@ body.hovering .cursor-outline {
     margin-bottom: 40px;
 }
 
-.hero .accomplishment {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin-bottom: 40px;
-}
-
 .hero-cta {
     display: flex;
     gap: 20px;
