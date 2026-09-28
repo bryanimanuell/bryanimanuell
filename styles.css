@@ -1089,3 +1089,42 @@ body.hovering .cursor-outline {
         font-size: 2rem;
     }
 }
+
+/* Visual showcase — project screenshots */
+.project-card {
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.project-content {
+    padding: 24px;
+    gap: 14px;
+}
+
+.project-card:hover .project-screenshot {
+    filter: brightness(1.05);
+    transform: scale(1.01);
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.project-screenshot {
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.projects-grid {
+    gap: 28px;
+}
+
