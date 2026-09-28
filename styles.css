@@ -1090,41 +1090,178 @@ body.hovering .cursor-outline {
     }
 }
 
-/* Visual showcase — project screenshots */
-.project-card {
-    overflow: hidden;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+/* Visual showcase — click-to-expand + screenshot carousel */
+.projects-grid {
+    gap: 28px;
+    transition: gap 0.35s ease;
 }
 
-.project-screenshot {
+.projects-grid.is-expanded {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(160px, 220px);
+    gap: 16px 20px;
+    align-items: start;
+}
+
+.projects-grid.is-expanded .project-card.is-featured {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    padding: 0;
+    cursor: default;
+}
+
+.projects-grid.is-expanded .project-card.is-featured:hover {
+    transform: none;
+}
+
+.projects-grid.is-expanded .project-card.is-aside {
+    grid-column: 2;
+    padding: 16px;
+    cursor: pointer;
+    opacity: 0.72;
+}
+
+.projects-grid.is-expanded .project-card.is-aside:hover {
+    opacity: 1;
+    transform: translateX(-4px);
+}
+
+.projects-grid.is-expanded .project-card.is-aside .project-desc,
+.projects-grid.is-expanded .project-card.is-aside .project-tech,
+.projects-grid.is-expanded .project-card.is-aside .project-gallery {
+    display: none;
+}
+
+.projects-grid.is-expanded .project-card.is-aside .project-header {
+    margin-bottom: 10px;
+}
+
+.projects-grid.is-expanded .project-card.is-aside h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.project-card[data-gallery] {
+    cursor: pointer;
+}
+
+.project-gallery {
+    position: relative;
+    margin: 0 0 8px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.project-card.is-featured .project-gallery {
     display: block;
-    width: 100%;
-    height: auto;
+}
+
+.project-gallery-frame {
     aspect-ratio: 16 / 10;
-    object-fit: cover;
-    object-position: top center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(0, 0, 0, 0.25);
 }
 
-.project-content {
-    padding: 24px;
+.project-gallery-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.project-gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(8, 20, 28, 0.7);
+    color: var(--clr-vanilla);
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.project-gallery-nav:hover {
+    background: rgba(10, 147, 150, 0.85);
+}
+
+.project-gallery-nav.prev { left: 12px; }
+.project-gallery-nav.next { right: 12px; }
+
+.project-gallery-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(8, 20, 28, 0.75);
+    color: var(--clr-vanilla);
+    font-size: 1.35rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.project-gallery-close:hover {
+    background: rgba(238, 155, 0, 0.85);
+}
+
+.project-gallery-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.project-gallery-dots button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+}
+
+.project-gallery-dots button.is-active {
+    background: var(--clr-primary);
+    transform: scale(1.2);
+}
+
+.project-card.is-featured .project-content {
+    padding: 0 24px 24px;
     gap: 14px;
 }
 
-.project-card:hover .project-screenshot {
-    filter: brightness(1.05);
-    transform: scale(1.01);
-    transition: transform 0.35s ease, filter 0.35s ease;
-}
+@media (max-width: 900px) {
+    .projects-grid.is-expanded {
+        grid-template-columns: 1fr;
+    }
 
-.project-screenshot {
-    transition: transform 0.35s ease, filter 0.35s ease;
-}
+    .projects-grid.is-expanded .project-card.is-featured {
+        grid-column: 1;
+        grid-row: auto;
+    }
 
-.projects-grid {
-    gap: 28px;
+    .projects-grid.is-expanded .project-card.is-aside {
+        grid-column: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
 }
 
