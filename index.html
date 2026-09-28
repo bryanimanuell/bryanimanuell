@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bray | FrontEnd Developer</title>
+    <title>Bryan Imanuel | Software Engineer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap">
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.lineicons.com/5.1/line/lineicons.css" rel="stylesheet">
@@ -18,22 +15,15 @@
 </head>
 
 <body>
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
-
     <div class="bg-noise"></div>
-    <div class="bg-gradient-orb orb-1"></div>
-    <div class="bg-gradient-orb orb-2"></div>
-    <div class="bg-gradient-orb orb-3"></div>
 
     <header class="navbar reveal-nav">
-        <a href="#" class="logo">Bray<span>.</span></a>
+        <a href="#home" class="logo">Bray<span>.</span></a>
         <nav>
             <ul class="nav-links">
+                <li><a href="#home" class="hover-target">Home</a></li>
+                <li><a href="#work" class="hover-target">Work</a></li>
                 <li><a href="#about" class="hover-target">About</a></li>
-                <li><a href="#experience" class="hover-target">Experience</a></li>
-                <li><a href="#skills" class="hover-target">Skills</a></li>
-                <li><a href="#projects" class="hover-target">Projects</a></li>
                 <li><a href="#contact" class="hover-target">Contact</a></li>
             </ul>
         </nav>
@@ -48,25 +38,19 @@
                 <p class="greeting reveal-stagger">Hi there, I'm</p>
                 <h1 class="reveal-stagger title-glow">Bryan Imanuel</h1>
                 <h2 class="reveal-stagger">Software <span class="gradient-text">Engineer</span></h2>
-                <p class="bio reveal-stagger">
-                    IT Software Engineer with 1+ year of experience building high-performance enterprise applications.
-                    <br>
-                    Specializing in <strong>Next.js</strong>, <strong>TypeScript</strong> &amp; <strong>.NET C#</strong>
-                    within Agile/Scrum frameworks.
+                <p class="accomplishment reveal-stagger" data-accomplishment="">
+                    Shipped procurement features across 20+ hospital clients, integrating 40+ APIs.
                 </p>
                 <div class="hero-cta reveal-stagger">
-                    <a href="#projects" class="btn btn-primary hover-target">View My Work <i
-                            class='bx bx-right-arrow-alt'></i></a>
-                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank"
-                        class="btn btn-icon hover-target" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/bryanimanuell" target="_blank" class="btn btn-icon hover-target"
-                        aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="#work" class="btn btn-primary hover-target">View My Work <i class="bx bx-right-arrow-alt"></i></a>
+                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank" class="btn btn-icon hover-target" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/bryanimanuell" target="_blank" class="btn btn-icon hover-target" aria-label="GitHub"><i class="bx bxl-github"></i></a>
                 </div>
             </div>
 
             <div class="hero-image reveal-stagger">
                 <div class="hero-image-wrapper">
-                    <img src="picture.png" alt="Bryan Imanuel" />
+                    <img src="picture.webp" alt="Bryan Imanuel" width="720" height="900">
                     <div class="hero-image-ring"></div>
                     <div class="hero-image-glow"></div>
                 </div>
@@ -98,9 +82,6 @@
                         + Laravel apps and Java Spring Boot backend services serving 1000+ users.</p>
                     <p class="hobbies">When I'm not coding, you can find me enjoying a cup of coffee ☕, playing billiard
                         🎱, or going for a ride 🏍️.</p>
-                </div>
-                <div class="about-image">
-                    <video src="IDCard.webm" autoplay loop muted playsinline></video>
                 </div>
             </div>
         </section>
@@ -160,64 +141,103 @@
             </div>
         </section>
 
-        <section class="skills section-padding" id="skills">
+        <section class="projects section-padding" id="work">
             <div class="section-heading reveal-up">
-                <h2>My Tech Toolbox 🧰</h2>
+                <h2>Selected Work 📌</h2>
                 <div class="line"></div>
             </div>
-            <div class="skills-grid reveal-stagger-group">
-                <div class="skill-category glass-card reveal-item hover-target">
-                    <h3>Frontend</h3>
-                    <div class="icon-list">
-                        <i class='bx bxl-react' title="React"></i>
-                        <i class='lni lni-nextjs' style='margin-top: -10px;' title="Next.js"></i>
-                        <i class='bx bxl-vuejs' title="Vue.js"></i>
-                        <i class='bx bxl-javascript' title="JavaScript"></i>
-                        <i class='bx bxl-typescript' title="TypeScript"></i>
-                        <i class='bx bxl-html5' title="HTML5"></i>
-                        <i class='bx bxl-css3' title="CSS3"></i>
-                        <span class="text-icon" title="ASP.NET">ASP</span>
+            <div class="projects-grid"><div class="project-card glass-card reveal-up hover-target" data-glow="" data-project-id="luvre" data-project-screenshot="assets/projects/luvre/01-home.jpg" data-gallery='["assets/projects/luvre/01-home.jpg","assets/projects/luvre/02-necklaces.jpg","assets/projects/luvre/03-product.jpg","assets/projects/luvre/04-earrings.jpg","assets/projects/luvre/05-material-guide.jpg"]'>
+                    <div class="project-content">
+                        <span hidden data-project-screenshot data-src="assets/projects/luvre/01-home.jpg"></span>
+                        <div class="project-gallery" hidden>
+                            <button type="button" class="project-gallery-close" aria-label="Close project view"><i class="bx bx-x"></i></button>
+                            <div class="project-gallery-frame">
+                                <img class="project-gallery-image" alt="Luvre Paris screenshot" width="1440" height="900">
+                            </div>
+                            <button type="button" class="project-gallery-nav prev" aria-label="Previous screenshot"><i class="bx bx-chevron-left"></i></button>
+                            <button type="button" class="project-gallery-nav next" aria-label="Next screenshot"><i class="bx bx-chevron-right"></i></button>
+                            <div class="project-gallery-dots" role="tablist" aria-label="Screenshot slides"></div>
+                        </div>
+                        <div class="project-header">
+                            <img src="luvre_favicon.ico" alt="Luvre" class="project-icon">
+                            <div class="project-links">
+                                <a href="https://luvre-paris.vercel.app/" target="_blank" class="hover-target"><i class="bx bx-globe"></i></a>
+                            </div>
+                        </div>
+                        <h3>Luvre Paris</h3>
+                        <p class="project-desc">Premium-grade ecommerce frontend for a Luvre Paris brand. Features a
+                            modern, sleek, and conversion-focused design system with modern ecommerce functionality.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>shadcn/ui</span>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category glass-card reveal-item hover-target">
-                    <h3>Backend</h3>
-                    <div class="icon-list">
-                        <span class="text-icon" title=".NET C#">C#</span>
-                        <span class="text-icon" title="VB.NET">VB</span>
-                        <i class='bx bxl-php' title="PHP"></i>
-                        <i class='lni lni-laravel' style='margin-top: -10px;' title="Laravel"></i>
-                        <i class='bx bxl-java' title="Java Spring Boot"></i>
-                        <i class='bx bxl-nodejs' title="Node.js"></i>
+                </div><div class="project-card glass-card reveal-up hover-target" data-glow="" data-project-id="greek-yoghurt" data-project-screenshot="assets/projects/greek-yoghurt/01-home.jpg" data-gallery='["assets/projects/greek-yoghurt/01-home.jpg","assets/projects/greek-yoghurt/02-products.jpg","assets/projects/greek-yoghurt/03-contact.jpg","assets/projects/greek-yoghurt/04-cart.jpg","assets/projects/greek-yoghurt/05-checkout.jpg"]'>
+                    <div class="project-content">
+                        <span hidden data-project-screenshot data-src="assets/projects/greek-yoghurt/01-home.jpg"></span>
+                        <div class="project-gallery" hidden>
+                            <button type="button" class="project-gallery-close" aria-label="Close project view"><i class="bx bx-x"></i></button>
+                            <div class="project-gallery-frame">
+                                <img class="project-gallery-image" alt="Greek Yoghurt Shop screenshot" width="1440" height="900">
+                            </div>
+                            <button type="button" class="project-gallery-nav prev" aria-label="Previous screenshot"><i class="bx bx-chevron-left"></i></button>
+                            <button type="button" class="project-gallery-nav next" aria-label="Next screenshot"><i class="bx bx-chevron-right"></i></button>
+                            <div class="project-gallery-dots" role="tablist" aria-label="Screenshot slides"></div>
+                        </div>
+                        <div class="project-header">
+                            <i class="bx bx-bowl-rice project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/bryanimanuell/learn-fe/tree/develop" target="_blank" class="hover-target"><i class="bx bxl-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Greek Yoghurt Shop</h3>
+                        <p class="project-desc">A premium-grade ecommerce frontend for a Greek yoghurt brand. Features a
+                            playful, health-conscious, and conversion-focused design system with modern ecommerce
+                            functionality.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>shadcn/ui</span>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category glass-card reveal-item hover-target">
-                    <h3>Database &amp; Tools</h3>
-                    <div class="icon-list">
-                        <i class='bx bxl-postgresql' title="PostgreSQL"></i>
-                        <i class="lni lni-mysql" style='margin-top: -10px;' title="MySQL / SQL Server"></i>
-                        <i class="lni lni-supabase" style='margin-top: -10px;' title="Supabase"></i>
-                        <i class='bx bxl-git' title="Git"></i>
-                        <i class='bx bxl-figma' title="Figma"></i>
-                        <i class="lni lni-vercel" style='margin-top: -10px;' title="Vercel"></i>
+                </div><div class="project-card glass-card reveal-up hover-target" data-glow="" data-project-id="job-board" data-project-screenshot="assets/projects/job-board/01-home.jpg" data-gallery='["assets/projects/job-board/01-home.jpg","assets/projects/job-board/02-login.jpg"]'>
+                    <div class="project-content">
+                        <span hidden data-project-screenshot data-src="assets/projects/job-board/01-home.jpg"></span>
+                        <div class="project-gallery" hidden>
+                            <button type="button" class="project-gallery-close" aria-label="Close project view"><i class="bx bx-x"></i></button>
+                            <div class="project-gallery-frame">
+                                <img class="project-gallery-image" alt="Job Board Platform screenshot" width="1440" height="900">
+                            </div>
+                            <button type="button" class="project-gallery-nav prev" aria-label="Previous screenshot"><i class="bx bx-chevron-left"></i></button>
+                            <button type="button" class="project-gallery-nav next" aria-label="Next screenshot"><i class="bx bx-chevron-right"></i></button>
+                            <div class="project-gallery-dots" role="tablist" aria-label="Screenshot slides"></div>
+                        </div>
+                        <div class="project-header">
+                            <i class="bx bx-briefcase-alt-2 project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/bryanimanuell/JobBoard" target="_blank" class="hover-target" style="padding-right: 10px;"><i class="bx bxl-github"></i></a>
+                                <a href="https://job-board-apps.vercel.app" target="_blank" class="hover-target"><i class="bx bx-globe"></i></a>
+                            </div>
+                        </div>
+                        <h3>Job Board Platform</h3>
+                        <p class="project-desc">A full-stack job board with role-based dashboards for companies and
+                            applicants. Features debounced real-time search, automated emails via Resend, PostgreSQL
+                            RLS, and a CI/CD pipeline with Jest &amp; GitHub Actions — deployed on Vercel.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Supabase</span>
+                            <span>Jest</span>
+                            <span>Vercel</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects section-padding" id="projects">
-            <div class="section-heading reveal-up">
-                <h2>Featured Projects 📌</h2>
-                <div class="line"></div>
-            </div>
-            <div class="projects-grid">
-                <!-- 1 -->
-                <div class="project-card glass-card reveal-up hover-target" data-glow>
+                </div><div class="project-card glass-card reveal-up hover-target" data-glow="">
                     <div class="project-content">
                         <div class="project-header">
                             <img src="aggre_favicon.ico" alt="Aggre" class="project-icon">
                             <div class="project-links">
-                                <a href="https://aggre.co.id/#/login" target="_blank" class="hover-target"><i
-                                        class='bx bx-globe'></i></a>
+                                <a href="https://aggre.co.id/#/login" target="_blank" class="hover-target"><i class="bx bx-globe"></i></a>
                             </div>
                         </div>
                         <h3>Aggre</h3>
@@ -233,81 +253,12 @@
                             <span>PostgreSQL</span>
                         </div>
                     </div>
-                </div>
-                <!-- 2 -->
-                <div class="project-card glass-card reveal-up hover-target" data-glow>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <img src="luvre_favicon.ico" alt="Luvre" class="project-icon">
-                            <div class="project-links">
-                                <a href="https://luvre-paris.vercel.app/" target="_blank" class="hover-target"><i
-                                        class="bx bx-globe"></i></a>
-                            </div>
-                        </div>
-                        <h3>Luvre Paris</h3>
-                        <p class="project-desc">Premium-grade ecommerce frontend for a Luvre Paris brand. Features a
-                            modern, sleek, and conversion-focused design system with modern ecommerce functionality.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Tailwind CSS</span>
-                            <span>shadcn/ui</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 3 -->
-                <div class="project-card glass-card reveal-up hover-target" data-glow>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="bx bx-bowl-rice project-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/bryanimanuell/learn-fe/tree/develop" target="_blank"
-                                    class="hover-target"><i class="bx bxl-github"></i></a>
-                            </div>
-                        </div>
-                        <h3>Greek Yoghurt Shop</h3>
-                        <p class="project-desc">A premium-grade ecommerce frontend for a Greek yoghurt brand. Features a
-                            playful, health-conscious, and conversion-focused design system with modern ecommerce
-                            functionality.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Tailwind CSS</span>
-                            <span>shadcn/ui</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4 -->
-                <div class="project-card glass-card reveal-up hover-target" data-glow>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="bx bx-briefcase-alt-2 project-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/bryanimanuell/JobBoard" target="_blank" class="hover-target"
-                                    style="padding-right: 10px;"><i class="bx bxl-github"></i></a>
-                                <a href="https://job-board-apps.vercel.app" target="_blank" class="hover-target"><i
-                                        class="bx bx-globe"></i></a>
-                            </div>
-                        </div>
-                        <h3>Job Board Platform</h3>
-                        <p class="project-desc">A full-stack job board with role-based dashboards for companies and
-                            applicants. Features debounced real-time search, automated emails via Resend, PostgreSQL
-                            RLS, and a CI/CD pipeline with Jest &amp; GitHub Actions — deployed on Vercel.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>TypeScript</span>
-                            <span>Supabase</span>
-                            <span>Jest</span>
-                            <span>Vercel</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 5 -->
-                <div class="project-card glass-card reveal-up hover-target" data-glow>
+                </div><div class="project-card glass-card reveal-up hover-target" data-glow="">
                     <div class="project-content">
                         <div class="project-header">
                             <i class="bx bx-movie-play project-icon"></i>
                             <div class="project-links">
-                                <a href="https://github.com/KoceOey/cinematrix" target="_blank" class="hover-target"><i
-                                        class="bx bxl-github"></i></a>
+                                <a href="https://github.com/KoceOey/cinematrix" target="_blank" class="hover-target"><i class="bx bxl-github"></i></a>
                             </div>
                         </div>
                         <h3>Cinematrix API</h3>
@@ -318,15 +269,12 @@
                             <span>REST API</span>
                         </div>
                     </div>
-                </div>
-                <!-- 6 -->
-                <div class="project-card glass-card reveal-up hover-target" data-glow>
+                </div><div class="project-card glass-card reveal-up hover-target" data-glow="">
                     <div class="project-content">
                         <div class="project-header">
                             <i class="bx bx-car project-icon"></i>
                             <div class="project-links">
-                                <a href="https://github.com/RayJonathan/RPLL-PT-Disetir-Atasan/" target="_blank"
-                                    class="hover-target"><i class="bx bxl-github"></i></a>
+                                <a href="https://github.com/RayJonathan/RPLL-PT-Disetir-Atasan/" target="_blank" class="hover-target"><i class="bx bxl-github"></i></a>
                             </div>
                         </div>
                         <h3>Disetir Atasan</h3>
@@ -337,8 +285,7 @@
                             <span>TypeScript</span>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div></div>
         </section>
 
         <section class="contact section-padding" id="contact">
@@ -348,8 +295,7 @@
                     say hi, I'll get back to you ASAP!</p>
                 <div class="contact-links">
                     <a href="mailto:bryanimanuell17@gmail.com" class="btn btn-primary hover-target">Say Hello</a>
-                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank"
-                        class="btn btn-secondary hover-target">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank" class="btn btn-secondary hover-target">LinkedIn</a>
                 </div>
             </div>
 
@@ -357,10 +303,8 @@
                 <p>Designed &amp; Built by <strong>Bryan Imanuel</strong>
                 </p>
                 <div class="social-links">
-                    <a href="https://github.com/bryanimanuell" target="_blank" class="hover-target"><i
-                            class="bx bxl-github"></i></a>
-                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank" class="hover-target"><i
-                            class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/bryanimanuell" target="_blank" class="hover-target"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/bryanimanuel/" target="_blank" class="hover-target"><i class="bx bxl-linkedin"></i></a>
                 </div>
             </footer>
         </section>
@@ -370,4 +314,4 @@
 
 
 
-</html>
+</body></html>
