@@ -1,0 +1,55 @@
+---
+title: YoGurt
+slug: yogurt
+discipline: Frontend
+description: A playful ecommerce frontend for a Greek yoghurt brand, featuring instant cart checkout and WhatsApp ordering.
+stack: [Next.js, TypeScript, React, Tailwind CSS, Motion, Zustand]
+image: /work/yogurt/01-home.png
+status: Completed case study
+---
+
+## Brief
+
+YoGurt is a digital storefront designed for an artisan Greek yoghurt brand based in Jakarta. While the brand enjoys a dedicated local following for its dense protein macros and daily fresh batches, its primary sales channel previously relied entirely on manual WhatsApp messages and bank transfer slips.
+
+The core design mandate was clear: build a modern, appetite-inducing ecommerce experience that removes friction from reordering, showcases fresh batches transparently, and preserves direct conversational customer care.
+
+The resulting interface balances a warm, approachable brand voice with rapid single-page conversion paths, immediate quantity adjustments, and dynamic free shipping thresholds.
+
+## Approach
+
+The visual direction centers on natural, dairy-inspired tones: a warm cream canvas complemented by honey-ochre action buttons and deep olive forest greens for nutritional credibility.
+
+To bridge health consciousness with everyday joy, the interface integrates approachable copy, micro-nutrition badges (High Protein, Probiotic, Low Fat), and gamified educational trivia cards alongside standard ecommerce primitives.
+
+<ScreenPair leftSrc="/work/yogurt/02-home.png" leftTitle="Nutritional Pillars & Value Grid" leftTag="Storefront" leftCaption="Four benefit cards articulating high protein content, gut-friendly live cultures, toddler safety, and same-day batch freshness." rightSrc="/work/yogurt/03-home.png" rightTitle="Interactive Fun Facts Carousel" rightTag="Gamification" rightCaption="Bite-sized trivia cards transforming dry nutrition facts into playful, easily shareable micro-moments." />
+
+For product discovery, best sellers are highlighted with live pricing in Indonesian Rupiah (IDR), immediate quantity modifiers, and direct cart actions, enabling repeat customers to reorder their regular batch in seconds without navigating nested product pages.
+
+<ScreenCard src="/work/yogurt/04-home.png" title="Best Sellers & Quick-Add Grid" tag="Conversion" caption="Fan Favorites shelf with authentic artisan photography, price tags, quantity modifiers, and one-tap cart addition." />
+
+The dedicated catalog builds upon this foundation with instant client-side search, sorting filters, and dietary category pills spanning Plain Greek, Fruit Series, and High Protein packs.
+
+<ScreenCard src="/work/yogurt/07-products.png" title="Product Catalog & Dynamic Filtering" tag="Catalog" caption="Full product archive featuring debounced text search, category taxonomy pills, and inventory status." />
+
+## Engineering
+
+The application is built on Next.js with React 19, TypeScript, and Tailwind CSS. Key engineering priorities focused on immediate feedback, persistent shopping state, and zero-distraction checkout flows.
+
+A persistent slide-out cart drawer slides over the active viewport without forcing full-page reloads. It features an animated progress bar computing the remaining spend needed to trigger free delivery (Rp 150.000), motivating users to add an extra jar before proceeding.
+
+<ScreenPair leftSrc="/work/yogurt/09-cart.png" leftTitle="Slide-Over Cart & Free Delivery Meter" leftTag="Cart Architecture" leftCaption="Dynamic slide-out drawer providing instant feedback, item quantity steppers, and free-shipping progress calculation." rightSrc="/work/yogurt/10-checkout.png" rightTitle="Frictionless Single-Page Checkout" rightTag="Checkout Flow" rightCaption="Two-column order layout separating recipient credentials and Jakarta delivery notes from a sticky order summary." />
+
+Recognizing local purchasing habits, the platform also integrates a direct WhatsApp ordering gateway on both the conversion banner and dedicated contact view, pre-filling customer cart selections directly into a WhatsApp draft for custom batch or corporate catering inquiries.
+
+<ScreenCard src="/work/yogurt/08-contact.png" title="Support Hub & WhatsApp Ordering" tag="Customer Care" caption="Conversational ordering hub tailored for Jakarta delivery logistics, custom volume batches, and instant support." />
+
+## Outcome
+
+The unified storefront streamlined customer orders while reinforcing brand trust through authentic customer testimonials and transparent production standards.
+
+<ScreenPair leftSrc="/work/yogurt/05-home.png" leftTitle="Verified Customer Testimonials" leftTag="Social Proof" leftCaption="Diverse customer persona reviews from fitness enthusiasts to parents, backed by 5-star ratings." rightSrc="/work/yogurt/06-home.png" rightTitle="Conversion Banner & Brand Footer" rightTag="Footer & CTAs" rightCaption="High-contrast delivery threshold reminder, order actions, store credentials, and operating hours." />
+
+Explore the complete archive of 10 interface screens below. Use the category tabs or switch to the compact Grid or Flow view to inspect any screen in full resolution.
+
+<YoGurtGallery />

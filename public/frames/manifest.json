@@ -1,0 +1,18 @@
+{
+  "frameCount": 180,
+  "shadesOnFrame": 150,
+  "sets": {
+    "540": {
+      "count": 91,
+      "width": 540,
+      "bytes": 896136,
+      "firstThirtyBytes": 124600
+    },
+    "1080": {
+      "count": 180,
+      "width": 960,
+      "bytes": 3081300,
+      "firstThirtyBytes": 445028
+    }
+  }
+}

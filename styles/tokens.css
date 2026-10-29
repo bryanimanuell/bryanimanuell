@@ -1,0 +1,11 @@
+:root {
+  --ink: #0d0b0b; --ink-2: #171313; --glow: #4a0a0a;
+  --paper: #ede9e4; --muted: #a29a95; --signal: #e03529; --on-signal: #050404;
+  --line: rgb(237 233 228 / .18);
+  --margin: clamp(20px, 4vw, 64px); --gutter: clamp(12px, 1.5vw, 24px);
+  --section: clamp(96px, 14vw, 192px);
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(.77, 0, .175, 1);
+  --ease-drawer: cubic-bezier(.32, .72, 0, 1);
+  --dur-press: 140ms; --dur-ui: 220ms; --dur-reveal: 900ms; --dur-route: 750ms;
+}

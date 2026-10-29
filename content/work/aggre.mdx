@@ -1,0 +1,64 @@
+---
+title: Aggre
+slug: aggre
+discipline: Product
+description: An enterprise B2B pharmaceutical procurement platform connecting hospital groups and licensed distributors.
+stack: [Next.js, TypeScript, React, Tailwind CSS, Oracle ERP, PostgreSQL]
+image: /work/aggre/01-RS-dashboard.png
+status: Completed case study
+---
+
+## Brief
+
+Aggre is an enterprise B2B healthcare procurement platform connecting hospital groups (Rumah Sakit / RS) with licensed pharmaceutical distributors (Pedagang Besar Farmasi / PBF). In Indonesia's regulated medical supply chain, hospital procurement involves strict regulatory compliance, volatile drug availability, and complex multi-facility fulfillment logistics.
+
+Historically, the hospital-to-distributor workflow was plagued by friction: procurement orders were issued via disparate PDFs and spreadsheets, hospital internal drug formularies did not match distributor warehouse SKUs, and purchase confirmations required manual re-entry into legacy Oracle ERP systems. Stockouts frequently led to delayed emergency treatments.
+
+The product objective was to design a comprehensive bilateral operating system. The platform had to serve two distinct user personas with customized operational dashboards while maintaining a synchronized, auditable transaction ledger for purchase orders, delivery orders, and financial settlement.
+
+## Approach
+
+The platform architecture divides functionality into two specialized role views complemented by shared transactional core workflows:
+
+1. **Hospital (RS) Role**: Focuses on demand planning, real-time PO tracking, supplier delivery SLA scorecards, inventory fulfillment gap analysis, and pharmaceutical spend analytics across regional hospital branches.
+2. **Distributor (PBF) Role**: Focuses on incoming order acceptance queues, order validity verification, master SKU translation, multi-branch customer billing mapping, and clinical generic cross-selling substitution.
+
+<ScreenPair leftSrc="/work/aggre/01-RS-dashboard.png" leftTitle="Hospital PO Tracking & Shipment Dashboard" leftTag="Hospital (RS)" leftCaption="Executive command center tracking 145 POs, shipment completion ratios, and supplier SLA fulfillment." rightSrc="/work/aggre/01-PBF-dashboard.png" rightTitle="Distributor PO Status Queue" rightTag="Distributor (PBF)" rightCaption="Incoming dispatch queue highlighting active contracts, orders expiring soon, and pending confirmations." />
+
+To solve delivery discrepancies before shipments leave the warehouse, both roles utilize dedicated Fulfillment GAP analytics. The system models quantity transitions through a five-stage funnel (Request -> Confirm -> Delivery -> Receipt), isolating rejected batches and Goods Receipt Note (GRN) variances in real time.
+
+<ScreenPair leftSrc="/work/aggre/03-RS-dashboard.png" leftTitle="Hospital Fulfillment GAP Funnel" leftTag="Hospital (RS)" leftCaption="Discrepancy funnel tracing 10.288 requested units to identify stock shortages and delivery slippage." rightSrc="/work/aggre/02-PBF-dashboard.png" rightTitle="Distributor Outbound GAP Tracking" rightTag="Distributor (PBF)" rightCaption="Outbound fulfillment monitor reconciling confirmed inventory against pending hospital orders." />
+
+A primary innovation was the Master Mapping engine. Because hospitals and distributors rarely share identical product taxonomies, distributors use automated cross-mapping to link hospital medication codes to internal warehouse SKUs, and establish certified therapeutic alternatives for generic substitution when primary medications are unavailable.
+
+<ScreenPair leftSrc="/work/aggre/03-PBF-mappingProduct.png" leftTitle="Master Product SKU Mapping" leftTag="Distributor (PBF)" leftCaption="Dynamic dictionary translating hospital internal formulary codes to distributor warehouse SKUs." rightSrc="/work/aggre/05-PBF-crossSelling.png" rightTitle="Master Cross-Selling & Substitution" rightTag="Distributor (PBF)" rightCaption="Clinical substitution engine suggesting certified therapeutic generic equivalents during stockouts." />
+
+## Engineering
+
+The platform was built with Next.js, React, TypeScript, and Tailwind CSS, backed by a PostgreSQL database and bidirectional Oracle ERP connectors. The core engineering challenges centered on data integrity, state synchronization between trading partners, and pharmaceutical batch traceability.
+
+Every procurement lifecycle progresses through a synchronized document pipeline: Purchase Order (PO) -> Delivery Order (DO) -> Good Receipt Note (GRN) -> Invoice.
+
+<ScreenCard src="/work/aggre/01-purchaseOrder.png" title="Central Purchase Order Registry" tag="Shared Workflow" caption="Unified multi-role transaction ledger tracking bilateral order states from UNMAPPED to AWAITING_SHIPMENT." />
+
+When hospital procurement approves a purchase order, it syncs directly to the distributor's enterprise resource planning system through an automated Oracle bridge ("Send To Oracle"). Individual order manifests detail buyer and seller SKU codes, units of measure (Box5, Box30), contract discounts, and national tax (PPN 11%) calculations.
+
+<ScreenPair leftSrc="/work/aggre/04-poDetail.png" leftTitle="PO Detail & Oracle ERP Synchronization" leftTag="ERP Integration" leftCaption="Itemized order manifest with Oracle sync button, dual SKU referencing, unit conversions, and PPN calculations." rightSrc="/work/aggre/05-poDetail.png" rightTitle="Immutable Order Audit Trail" leftTag="Compliance" rightCaption="Step-by-step milestone progression log from creation to fulfillment with official PDF order downloads." />
+
+To comply with Indonesian pharmaceutical safety mandates (BPOM), delivery orders enforce mandatory batch number tracking and expiry date validation at the individual line-item level. Hospital warehouse staff verify these credentials upon physical delivery before generating digital Good Receipt Notes.
+
+<ScreenPair leftSrc="/work/aggre/06-doDetail.png" leftTitle="Delivery Order Batch Traceability" leftTag="Pharmaceutical Compliance" leftCaption="Itemized pharmaceutical batch numbers and manufacturer expiry dates ensuring cold-chain and clinical safety." rightSrc="/work/aggre/03-goodReceiptNotes.png" rightTitle="Good Receipt Notes (GRN) Registry" rightTag="Receiving Bay" rightCaption="Formal hospital warehouse goods inspection triggering digital receipt confirmation and invoice clearance." />
+
+Financial operations are consolidated in an integrated Invoice ledger tracking order values across hundreds of purchase agreements, while fine-grained Role-Based Access Control (RBAC) enforces strict data isolation between hospital procurement personnel, warehouse managers, and distributor branch officers.
+
+<ScreenPair leftSrc="/work/aggre/07-Invoice.png" leftTitle="Invoice Ledger & Settlement Summary" leftTag="Financial Operations" leftCaption="Order value summary (Rp 675M+) with composition breakdown across outstanding, overdue, and paid settlements." rightSrc="/work/aggre/09-masterUser.png" rightTitle="Role-Based Access Control (RBAC)" rightTag="Security & Governance" rightCaption="Granular permission management isolating hospital procurement and distributor branch staff." />
+
+## Outcome
+
+Aggre eliminated phone and paper-based ordering across participating hospital networks. Discrepancies between purchase orders and actual delivered medication dropped substantially, while automated Oracle ERP synchronization reduced manual reconciliation time from days to minutes.
+
+The platform architecture demonstrates how complex B2B supply chains can be transformed into transparent, user-centered digital workflows that ensure critical medications reach patients on time.
+
+Explore all 20 platform interface screens below. Use the role filter tabs to view features specific to Hospitals (RS), Distributors (PBF), or Shared Workflows, or toggle between Showcase, Grid, and Supply Flow views.
+
+<AggreGallery />

@@ -1,0 +1,54 @@
+---
+title: OOTD
+slug: ootd
+discipline: Frontend
+description: An editorial fashion commerce exploration featuring seasonal capsule drops and interactive "Shop The Look" lookbooks.
+stack: [Next.js, TypeScript, React, Tailwind CSS, Motion]
+image: /work/ootd/01-home.png
+status: Self project · In progress
+---
+
+## Brief
+
+OOTD (Outfit Of The Day) is a self-initiated fashion commerce web exploration created to bridge the divide between high-fashion editorial storytelling and direct e-commerce conversion.
+
+Traditional online fashion stores often separate editorial content from product purchases: inspiration lives in lookbooks or social media, while the storefront relies on sterile white-background grids with isolated garment shots. Shoppers are forced to search separately for each piece in an outfit, introducing friction and dropping basket sizes.
+
+The core objective of OOTD is to build an editorial-first commerce platform. The interface treats garments as part of cohesive styling narratives and seasonal capsule drops (Jacquemus, Adidas, Arc'teryx, Ralph Lauren, Zara Luxe), enabling shoppers to explore looks holistically and purchase complete outfits with a single click.
+
+## Approach
+
+The platform adopts a luxury editorial aesthetic characterized by generous whitespace, refined typography, and full-bleed Mediterranean campaign photography.
+
+The architecture organizes fashion discovery into seasonal drops and collaborative capsules:
+
+1. **Editorial Campaign Headers**: High-impact visual entrances setting the tone for each season, exemplified by the Mediterranean "Chase The Sun" summer capsule.
+2. **Seasonal Capsule Portals**: A calendar-driven drop directory allowing shoppers to navigate distinct brand partnerships and cultural capsules.
+
+<ScreenPair leftSrc="/work/ootd/01-home.png" leftTitle="Editorial Campaign Hero" leftTag="Editorial Direction" leftCaption="Cinematic campaign header for the Jacquemus summer resort capsule with minimalist typographic hierarchy." rightSrc="/work/ootd/02-home.png" rightTitle="Seasonal Capsule Portal" rightTag="Brand Partnerships" rightCaption="Calendar-driven capsule switcher bridging brand partnerships across Arc'teryx, Jacquemus, Zara Luxe, and Ralph Lauren." />
+
+Within each collection, lookbooks provide granular occasion filtering (Casual, Streetwear, Formal). Shoppers can inspect styling curations tailored to specific environments while maintaining visual harmony across the catalog.
+
+<ScreenPair leftSrc="/work/ootd/03-summerCollection.png" leftTitle="Summer Resort Lookbook Directory" leftTag="Resort Capsule" leftCaption="Clean lookbook gallery curating linen garments, flowing tiered silhouettes, and Mediterranean earth tones." rightSrc="/work/ootd/05-lunarStreetwear.png" rightTitle="Lunar New Year Streetwear Drop" rightTag="Cultural Athleisure" rightCaption="Adidas cultural streetwear capsule fusing traditional crimson satin and dragon gold embroidery with modern utility cuts." />
+
+## Engineering
+
+The frontend is built with Next.js, React, TypeScript, and responsive modern layout primitives. The design focuses on fluid layout transitions, responsive bento grids, and high-performance image optimization for retina displays.
+
+The key interaction design innovation is the "Shop The Look" itemization modal. When a shopper clicks on any styled model in a lookbook, the modal decomposes the complete outfit into individual purchasable garments with SKU details, sizing, and transparent pricing.
+
+<ScreenCard src="/work/ootd/04-detail.png" title="'Shop The Look' SKU Itemization Modal" tag="Commerce Innovation" caption="Two-column quick-view modal linking styled lifestyle photography directly to itemized garments with individual pricing and one-click purchase." />
+
+Instant tab switching allows shoppers to transition between aesthetic moods without page reloads or layout shift. The bottom of each collection integrates horizontal cross-collection discovery to maintain browse momentum across seasons.
+
+<ScreenPair leftSrc="/work/ootd/06-lunarCasual.png" leftTitle="Lunar New Year Casual Wardrobe" leftTag="Style Navigation" leftCaption="Velvet track jackets and tennis skirts demonstrating sub-category tab switching with consistent framing." rightSrc="/work/ootd/07-footer.png" rightTitle="Cross-Collection Discovery Carousel" rightTag="Store Navigation" rightCaption="End-of-page discovery carousel driving continuous browsing between seasonal capsules and partner lookbooks." />
+
+## Outcome
+
+OOTD demonstrates how digital fashion retail can feel like flipping through a luxury magazine while maintaining fast, friction-free e-commerce utility.
+
+As an active self-initiated project, ongoing engineering exploration includes animated page transitions, real-time basket state persistence, and interactive 3D garment inspection.
+
+Explore the complete 7-screen interface archive below. Filter by department or toggle between Editorial Showcase, Bento Grid, and Lookbook Journey views.
+
+<OotdGallery />

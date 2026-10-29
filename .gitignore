@@ -1,4 +1,12 @@
-aggre_favicon.ico
-favicon.svg
-IDCard.webm
-picture.png
+.next/
+out/
+.env*
+!.env.example
+test-results/
+playwright-report/
+.lighthouseci/
+*.tsbuildinfo
+assets-src/frames/
+.vercel/
+node_modules/
+/.lighthouseci

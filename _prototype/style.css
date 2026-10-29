@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #000, #630000, #000);
+    height: 500vh;
+}
+
+.left-col {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.canvas-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+h1 {
+    color: #fff;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    position: absolute;
+    z-index: -2;
+}
+
+canvas {
+    /* width: 100%; */
+    /* height: 100%; */
+    position: fixed;
+    bottom: 0;
+    object-fit: cover;
+    /* z-index: 1; */
+}
+
+#portfolio-head {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

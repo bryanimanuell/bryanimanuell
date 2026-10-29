@@ -1,0 +1,229 @@
+.hero {
+    position: relative;
+    isolation: isolate;
+    height: 100vh;
+    min-height: 640px;
+    max-height: 1200px;
+    overflow: clip;
+    background: var(--ink);
+}
+
+.glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 64% 67%, var(--glow), transparent 65%);
+    transform-origin: 64% 67%;
+}
+
+.glowOverlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 64% 67%, #781b13, transparent 65%);
+    opacity: 0;
+    transform-origin: 64% 67%;
+    will-change: opacity, transform;
+}
+
+.name {
+    position: absolute;
+    z-index: 0;
+    left: var(--margin);
+    top: clamp(100px, 18svh, 200px);
+    margin: 0;
+    font-size: clamp(100px, 16.4vw, 248px);
+    letter-spacing: -.055em;
+    font-weight: 500;
+    line-height: .81;
+}
+
+.name span {
+    display: block;
+}
+
+.name span+span {
+    margin-left: 5vw;
+    font-weight: 300;
+}
+
+.portrait {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -12%;
+    width: 87%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.poster,
+.poster img,
+.portrait canvas {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.portrait canvas {
+    opacity: 0;
+}
+
+.hero[data-ready=true] .portrait canvas {
+    opacity: 1;
+}
+
+.hero[data-ready=true] .poster {
+    opacity: 0;
+}
+
+.foreground {
+    position: absolute;
+    z-index: 2;
+    bottom: 6.5%;
+    left: var(--margin);
+    right: var(--margin);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+}
+
+.foreground a {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 18px 24px;
+    min-width: 180px;
+}
+
+.lines {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-width: 420px;
+    align-items: end;
+    min-height: 4.8em;
+}
+
+.line {
+    grid-area: 1 / 1;
+    font-size: clamp(18px, 1.75vw, 25px);
+    line-height: 1.4;
+    margin: 0;
+    text-shadow: 0 2px 16px var(--ink);
+    opacity: 0;
+    transform: translateY(28px);
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.line:first-child {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.loading {
+    position: absolute;
+    bottom: 12px;
+    left: var(--margin);
+    font: 11px var(--font-mono), monospace;
+    color: var(--muted);
+    z-index: 2;
+}
+
+@media (min-width: 1600px) {
+    .portrait {
+        right: -7%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        min-height: 660px;
+        max-height: 1000px;
+    }
+
+    .name {
+        top: 120px;
+        font-size: clamp(66px, 18vw, 138px);
+        line-height: .87;
+    }
+
+    .name span+span {
+        margin-left: 0;
+    }
+
+    .portrait {
+        right: -10%;
+        width: 140%;
+        height: 62%;
+        bottom: 90px;
+    }
+
+    .foreground {
+        bottom: 32px;
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lines {
+        max-width: 280px;
+        min-height: 5em;
+    }
+
+    .line {
+        font-size: 17px;
+    }
+
+    .foreground a {
+        padding: 12px 18px;
+        min-width: 164px;
+    }
+
+    .foreground::before {
+        content: '';
+        position: absolute;
+        inset: -60px -20px -32px;
+        background: linear-gradient(transparent, var(--ink) 58%);
+        z-index: -1;
+    }
+
+    .loading {
+        bottom: 7px;
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero {
+        height: 100svh;
+    }
+
+    .portrait canvas {
+        display: none;
+    }
+
+    .poster {
+        opacity: 1 !important;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .line:first-child {
+        display: block;
+        opacity: 1;
+        transform: none;
+    }
+
+    .glowOverlay {
+        display: none;
+    }
+}
